@@ -1,45 +1,45 @@
 :root {
   /* sizes */
-  --height: 2.5rem;
-  --bar-margin-y: 0.625rem;
-  --bar-margin-x: 1.25rem;
+  --height: 1rem;
+  --bar-margin-y: 2px;
+  --bar-margin-x: 0.35rem;
 
   /* fonts */
   --font-family: "SF Pro Display", Roboto, Helvetica, Arial, sans-serif;
-  --font-size: 16px;
+  --font-size: 12px;
   --font-weight: 500;
 
   /* border */
-  --border-size: 0.125rem;
-  --radius: 0.25rem;
+  --border-size: 1px;
+  --radius: 10px;
 
   /* shadow */
-  --shadow-size-bar: 0.25rem;
-  --shadow-size-button: 0.125rem;
+  --shadow-size-bar: 0px;
+  --shadow-size-button: 0px;
 
   /* colors */
-  --text: var(--rp-text);
-  --bg: var(--rp-overlay);
-  --border: var(--rp-highlight-low);
-  --shadow: var(--rp-highlight-low);
-  --icon: var(--rp-love);
-  --memory: var(--rp-iris);
-  --cpu: var(--rp-rose);
-  --cpu-high-usage: var(--rp-love);
-  --battery-good: var(--rp-pine);
-  --battery-mid: var(--rp-gold);
-  --battery-low: var(--rp-love);
-  --focused-process: var(--rp-text);
-  --process: var(--rp-muted);
-  --displayed: var(--rp-text);
-  --ws-1: var(--rp-gold);
-  --ws-2: var(--rp-love);
-  --ws-3: var(--rp-pine);
-  --ws-4: var(--rp-foam);
-  --ws-5: var(--rp-iris);
-  --tiling-direction: var(--rp-rose);
-  --not-playing: var(--rp-love);
-  --now-playing: var(--rp-pine);
-  --network: var(--rp-text);
-  --weather: var(--rp-text);
+  --text: var(--nord4);
+  --bg: var(--nord0);
+  --border: var(--nord3);
+  --shadow: var(--nord3);
+  --icon: var(--nord11);
+  --memory: var(--nord7);
+  --cpu: var(--nord11);
+  --cpu-high-usage: var(--nord11);
+  --battery-good: var(--nord14);
+  --battery-mid: var(--nord13);
+  --battery-low: var(--nord11);
+  --focused-process: var(--nord8);
+  --process: var(--nord9);
+  --displayed: var(--nord4);
+  --ws-1: var(--nord11);
+  --ws-2: var(--nord12);
+  --ws-3: var(--nord13);
+  --ws-4: var(--nord14);
+  --ws-5: var(--nord15);
+  --tiling-direction: var(--nord8);
+  --not-playing: var(--nord11);
+  --now-playing: var(--nord14);
+  --network: var(--nord4);
+  --weather: var(--nord4);
 }
