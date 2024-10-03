@@ -1,8 +1,8 @@
 :root {
   /* sizes */
-  --height: 0.5rem;
-  --bar-margin-y: 0.125rem;
-  --bar-margin-x: 0.25rem;
+  --height: 1rem;
+  --bar-margin-y: 2px;
+  --bar-margin-x: 0.35rem;
 
   /* fonts */
   --font-family: "SF Pro Display", Roboto, Helvetica, Arial, sans-serif;
@@ -11,7 +11,7 @@
 
   /* border */
   --border-size: 1px;
-  --radius: 9999px;
+  --radius: 10px;
 
   /* shadow */
   --shadow-size-bar: 0px;
