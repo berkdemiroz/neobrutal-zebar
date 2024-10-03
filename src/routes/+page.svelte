@@ -8,7 +8,8 @@
     MemoryOutput,
     DateOutput,
     NetworkOutput,
-    WeatherOutput
+    WeatherOutput,
+    KeyboardOutput
   } from "zebar";
 
   import "../app.css";
@@ -24,6 +25,7 @@
   let memory = $state<MemoryOutput | null>();
   let network = $state<NetworkOutput | null>();
   let weather = $state<WeatherOutput | null>();
+  let keyboard = $state<KeyboardOutput | null>();
 
   onMount(() => {
     const providers = zebar.createProviderGroup({
@@ -33,7 +35,8 @@
       glazewm: { type: "glazewm" },
       memory: { type: "memory" },
       network: { type: "network" },
-      weather: { type: "weather" }
+      weather: { type: "weather" },
+      keyboard: { type: "keyboard" }
     });
 
     providers.onOutput(() => {
@@ -44,6 +47,7 @@
       memory = providers.outputMap.memory;
       network = providers.outputMap.network;
       weather = providers.outputMap.weather;
+      keyboard = providers.outputMap.keyboard;
     });
   });
 </script>
@@ -52,17 +56,18 @@
   class="grid grid-cols-3 items-center h-bar my-zby mx-zbx text-zb-text text-zb-size font-base"
 >
   <Group class="justify-self-start">
-    <LeftGroup battery={battery!} cpu={cpu!} memory={memory!} />
-  </Group>
-  <Group class="justify-self-center">
     <Workspaces glazewm={glazewm!} />
   </Group>
+  <Group class="justify-self-center">
+    <RightGroup date={date!} glazewm={glazewm!} weather={weather!} />
+  </Group>
   <Group class="justify-self-end">
-    <RightGroup
-      date={date!}
-      glazewm={glazewm!}
+    <LeftGroup
+      battery={battery!}
+      cpu={cpu!}
+      memory={memory!}
+      keyboard={keyboard!}
       network={network!}
-      weather={weather!}
     />
   </Group>
 </div>
