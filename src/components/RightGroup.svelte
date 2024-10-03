@@ -15,7 +15,6 @@
   <!-- <i class="ti ti-point-filled"></i> -->
   <i></i>
   {date?.formatted}
-  <NowPlaying {glazewm} />
   {#if weather}
     <div>
       {#if weather.status === "clear_day"}
@@ -45,6 +44,6 @@
       {/if}
       {Math.round(weather.celsiusTemp)}°
     </div>
-    <i></i>
   {/if}
+  <NowPlaying {glazewm} />
 </div>
