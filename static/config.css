@@ -1,7 +1,7 @@
 :root {
   /* sizes */
   --height: 1rem;
-  --bar-margin-y: 2px;
+  --bar-margin-y: 0.2rem;
   --bar-margin-x: 0.35rem;
 
   /* fonts */

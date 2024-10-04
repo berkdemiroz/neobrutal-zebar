@@ -55,13 +55,13 @@
 <div
   class="grid grid-cols-3 items-center h-bar my-zby mx-zbx text-zb-text text-zb-size font-base"
 >
-  <Group class="h-full p-1 justify-self-start">
+  <Group class="flex items-stretch p-2 justify-self-start">
     <Workspaces glazewm={glazewm!} />
   </Group>
-  <Group class="justify-self-center">
+  <Group class="flex items-stretch p-2 justify-self-center">
     <RightGroup date={date!} glazewm={glazewm!} weather={weather!} />
   </Group>
-  <Group class="h-full p-1 justify-self-end">
+  <Group class="flex items-stretch p-2 justify-self-end">
     <LeftGroup
       battery={battery!}
       cpu={cpu!}
