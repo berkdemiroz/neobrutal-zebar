@@ -30,13 +30,15 @@
     <i class="ti ti-cpu"></i>
     <Meter class="bg-zb-cpu" percent={Math.round(cpu?.usage ?? 0)} />
   </div>
-  <div class="flex gap-1 items-center">
-    <i class="ti ti-bolt"></i>
-    <Meter
-      class="bg-zb-battery-good"
-      percent={Math.round(battery?.chargePercent ?? 100)}
-    />
-  </div>
+  {#if battery}
+    <div class="flex gap-1 items-center">
+      <i class="ti ti-bolt"></i>
+      <Meter
+        class="bg-zb-battery-good"
+        percent={Math.round(battery?.chargePercent ?? 100)}
+      />
+    </div>
+  {/if}
   <div class="flex flex-row items-center gap-1">
     {#if network?.defaultInterface?.type === "ethernet"}
       <i class="ti ti-network"></i>

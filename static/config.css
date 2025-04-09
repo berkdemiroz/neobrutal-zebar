@@ -29,7 +29,7 @@
   --battery-good: var(--nord14);
   --battery-mid: var(--nord13);
   --battery-low: var(--nord11);
-  --focused-process: var(--nord8);
+  --focused-process: var(--nord7);
   --process: var(--nord9);
   --displayed: var(--nord4);
   --ws-1: var(--nord11);
@@ -37,7 +37,7 @@
   --ws-3: var(--nord13);
   --ws-4: var(--nord14);
   --ws-5: var(--nord15);
-  --tiling-direction: var(--nord8);
+  --tiling-direction: var(--nord7);
   --not-playing: var(--nord11);
   --now-playing: var(--nord14);
   --network: var(--nord4);

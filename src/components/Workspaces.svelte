@@ -24,44 +24,31 @@
     return entry?.iconName ?? "ti-background";
   };
 
-  let { glazewm } : { glazewm: GlazeWmOutput}= $props()
+  let { glazewm }: { glazewm: GlazeWmOutput } = $props();
 </script>
 
 {#if glazewm}
   <div class="flex flex-row gap-2 items-center">
     {#each glazewm.currentWorkspaces as workspace, i}
-      <Button
-        iconClass="ti {workspace.hasFocus ? 'ti-point-filled' : 'ti-point'}"
-        class="text-zb-ws-{i}"
-        callback={() =>
+      <button
+        class="flex items-center justify-center h-5 w-5 text-xs font-medium
+               border border-zb-border rounded-base
+               {workspace.hasFocus
+          ? 'bg-[hsl(var(--nord7)_/_0.3)] text-[hsl(var(--nord7))]'
+          : 'bg-[hsl(var(--nord6)_/_0.2)] text-[hsl(var(--nord6))]'}"
+        onclick={() =>
           glazewm!.runCommand(`focus --workspace ${workspace.name}`)}
-      />
+        aria-label={`Workspace ${i + 1}`}
+      >
+        {workspace.name}
+      </button>
     {/each}
     <button
       aria-label="tiling-direction"
-      class="flex items-center justify-center text-zb-tiling-direction"
+      class="flex items-center justify-center text-zb-tiling-direction h-5 w-5"
       onclick={() => glazewm!.runCommand("toggle-tiling-direction")}
     >
       <i class="ti ti-switch-{glazewm?.tilingDirection}"></i>
     </button>
-    <div class="flex items-center gap-1">
-      {#if glazewm.focusedWorkspace}
-        {#each glazewm.focusedWorkspace!.children as child}
-          {#if child.type == "window" && child.state.type != "minimized"}
-            {@const icon = getProcessIcon(child as Window)}
-            {#if icon}
-              <span
-                class={child.hasFocus
-                  ? "text-zb-focused-process"
-                  : "text-zb-process"}
-              >
-                <i class="ti {icon}"></i>
-              </span>
-            {/if}
-          {/if}
-        {/each}
-      {/if}
-    </div>
-  <i></i>
   </div>
 {/if}
